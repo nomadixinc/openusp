@@ -15,7 +15,7 @@
 #  openusp-db:
 #    image: arm64v8/mongo
 
-version: '3.7'
+#version: '3.7'
 services:
   openusp-db:
     image: mongo
