@@ -36,7 +36,7 @@ services:
       openusp:
         ipv4_address: 10.5.0.2
   openusp-broker:
-    image: islandora/activemq:mariadb_max_packet
+    image: islandora/activemq:6.4.3
     container_name: openusp-broker
     ports:
       - 61613:61613
@@ -59,7 +59,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/controller/Dockerfile
-    image: n4networks/openusp-controller:local
+    image: nomadix/openusp-controller:local
     container_name: openusp-controller
     depends_on:
       openusp-db:
@@ -75,7 +75,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/apiserver/Dockerfile
-    image: n4networks/openusp-apiserver:local
+    image: nomadix/openusp-apiserver:local
     container_name: openusp-apiserver
     depends_on:
        openusp-db:
@@ -93,7 +93,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/obuspa/Dockerfile
-    image: n4networks/openusp-agent:local
+    image: nomadix/openusp-agent:local
     container_name: openusp-agent
     depends_on:
        openusp-broker:
@@ -108,7 +108,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/cli/Dockerfile
-    image: n4networks/openusp-cli:local
+    image: nomadix/openusp-cli:local
     container_name: openusp-cli
     env_file:
       - ../configs/openusp.env

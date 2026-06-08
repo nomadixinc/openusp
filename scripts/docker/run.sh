@@ -15,10 +15,10 @@
 
 
 # Controller
-docker run --env-file configs/openusp.env n4networks/openusp-controller
+docker run --env-file configs/openusp.env nomadix/openusp-controller
 
 # ApiServer
-docker run --env-file configs/openusp.env n4networks/openusp-apiserver
+docker run --env-file configs/openusp.env nomadix/openusp-apiserver
 
 # Cli
-docker run --env-file configs/openusp.env --network=openusp -it n4networks/openusp-cli
+docker run --env-file configs/openusp.env --network=openusp -it nomadix/openusp-cli

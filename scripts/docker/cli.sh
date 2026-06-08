@@ -14,4 +14,4 @@
 # limitations under the License.
 
 # Cli
-docker run --env-file configs/openusp.env --network=openusp -it n4networks/openusp-cli "sleep infinity"
+docker run --env-file configs/openusp.env --network=openusp -it nomadix/openusp-cli "sleep infinity"

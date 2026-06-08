@@ -1,4 +1,4 @@
-module github.com/n4-networks/openusp
+module github.com/nomadixinc/openusp
 
 go 1.21
 

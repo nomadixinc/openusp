@@ -21,8 +21,8 @@ import (
 	"strconv"
 
 	"github.com/abiosoft/ishell"
-	"github.com/n4-networks/openusp/pkg/parser"
-	"github.com/n4-networks/openusp/pkg/pb/bbf/usp_msg"
+	"github.com/nomadixinc/openusp/pkg/parser"
+	"github.com/nomadixinc/openusp/pkg/pb/bbf/usp_msg"
 )
 
 var (

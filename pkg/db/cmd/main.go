@@ -20,7 +20,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/n4-networks/openusp/pkg/db"
+	"github.com/nomadixinc/openusp/pkg/db"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

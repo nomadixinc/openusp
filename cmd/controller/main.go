@@ -18,7 +18,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/n4-networks/openusp/pkg/cntlr"
+	"github.com/nomadixinc/openusp/pkg/cntlr"
 )
 
 func main() {

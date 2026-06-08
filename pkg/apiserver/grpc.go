@@ -20,7 +20,7 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/n4-networks/openusp/pkg/pb/cntlrgrpc"
+	"github.com/nomadixinc/openusp/pkg/pb/cntlrgrpc"
 	"google.golang.org/grpc"
 )
 

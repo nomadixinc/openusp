@@ -1,4 +1,4 @@
-[![CI Build Status](https://github.com/n4-networks/openusp/actions/workflows/build.yml/badge.svg)](https://github.com/n4-networks/openusp/actions/workflows/build.yml)
+[![CI Build Status](https://github.com/nomadixinc/openusp/actions/workflows/build.yml/badge.svg)](https://github.com/nomadixinc/openusp/actions/workflows/build.yml)
 
 # Summary 
 Open source implementation of USP (User Services Platform) controller based on Broadband Forum's [USP](https://usp.technology) Specification.
@@ -14,7 +14,7 @@ OpenUSP is an Apache Licensed 2.0 repository, written primarily in [golang](http
 The most simplest way to use is using docker-compose to pull all the required images from docker hub. 
 
 ```
-git clone git@github.com:/n4-networks/openusp
+git clone git@github.com:nomadixinc/openusp.git
 cd openusp
 source scripts/bash/aliases
 dc up -d

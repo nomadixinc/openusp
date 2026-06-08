@@ -19,7 +19,7 @@ import (
 	"log"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/n4-networks/openusp/pkg/pb/bbf/usp_msg"
+	"github.com/nomadixinc/openusp/pkg/pb/bbf/usp_msg"
 )
 
 func checkIntegrityOfUspErrMsg(uspMsg *usp_msg.Msg) error {

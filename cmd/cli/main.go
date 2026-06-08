@@ -17,7 +17,7 @@ package main
 import (
 	"log"
 
-	"github.com/n4-networks/openusp/pkg/cli"
+	"github.com/nomadixinc/openusp/pkg/cli"
 )
 
 func main() {

@@ -17,9 +17,9 @@ package cntlr
 import (
 	"log"
 
-	"github.com/n4-networks/openusp/pkg/db"
-	"github.com/n4-networks/openusp/pkg/mtp"
-	"github.com/n4-networks/openusp/pkg/pb/cntlrgrpc"
+	"github.com/nomadixinc/openusp/pkg/db"
+	"github.com/nomadixinc/openusp/pkg/mtp"
+	"github.com/nomadixinc/openusp/pkg/pb/cntlrgrpc"
 )
 
 const (

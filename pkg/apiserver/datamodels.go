@@ -18,7 +18,7 @@ import (
 	"errors"
 	"log"
 
-	"github.com/n4-networks/openusp/pkg/db"
+	"github.com/nomadixinc/openusp/pkg/db"
 )
 
 func (as *ApiServer) getDmObjs(d *uspData) ([]*db.DmObject, error) {

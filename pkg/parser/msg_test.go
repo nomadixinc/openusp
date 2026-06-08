@@ -24,7 +24,7 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/n4-networks/openusp/pkg/pb/bbf/usp_msg"
+	"github.com/nomadixinc/openusp/pkg/pb/bbf/usp_msg"
 )
 
 func usage(args []string) {

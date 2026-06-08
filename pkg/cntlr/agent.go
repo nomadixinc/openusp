@@ -20,9 +20,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/n4-networks/openusp/pkg/mtp"
-	"github.com/n4-networks/openusp/pkg/parser"
-	"github.com/n4-networks/openusp/pkg/pb/bbf/usp_msg"
+	"github.com/nomadixinc/openusp/pkg/mtp"
+	"github.com/nomadixinc/openusp/pkg/parser"
+	"github.com/nomadixinc/openusp/pkg/pb/bbf/usp_msg"
 )
 
 type agentInitData struct {

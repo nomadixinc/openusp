@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-openssl req -new -nodes -newkey rsa:4096 -days 365 -x509 -keyout ../ssl/server.key -out ../ssl/server.csr -subj "/C=IN/ST=Telengana/L=Hyderabad/O=N4-Networks/OU=IT/CN=n4-networks.com"
+openssl req -new -nodes -newkey rsa:4096 -days 365 -x509 -keyout ../ssl/server.key -out ../ssl/server.csr -subj "/C=IN/ST=Texas/L=Plano/O=Nomadix/OU=IT/CN=nomadix.com"
 
 #/C=Country
 #/ST=State

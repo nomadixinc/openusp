@@ -19,7 +19,7 @@ import (
 	"log"
 	"regexp"
 
-	"github.com/n4-networks/openusp/pkg/db"
+	"github.com/nomadixinc/openusp/pkg/db"
 )
 
 type ObjParam struct {

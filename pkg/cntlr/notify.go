@@ -18,8 +18,8 @@ import (
 	"errors"
 	"log"
 
-	"github.com/n4-networks/openusp/pkg/parser"
-	"github.com/n4-networks/openusp/pkg/pb/bbf/usp_msg"
+	"github.com/nomadixinc/openusp/pkg/parser"
+	"github.com/nomadixinc/openusp/pkg/pb/bbf/usp_msg"
 )
 
 func prepareUspMsgNotifyRes(agentId string, mData *uspMsgData) ([]byte, error) {

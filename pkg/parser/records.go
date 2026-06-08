@@ -18,7 +18,7 @@ import (
 	"errors"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/n4-networks/openusp/pkg/pb/bbf/usp_record"
+	"github.com/nomadixinc/openusp/pkg/pb/bbf/usp_record"
 )
 
 // This package adds usp secured/plaintext recods communicaion

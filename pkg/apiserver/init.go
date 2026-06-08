@@ -23,8 +23,8 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
-	"github.com/n4-networks/openusp/pkg/db"
-	"github.com/n4-networks/openusp/pkg/pb/cntlrgrpc"
+	"github.com/nomadixinc/openusp/pkg/db"
+	"github.com/nomadixinc/openusp/pkg/pb/cntlrgrpc"
 	"go.mongodb.org/mongo-driver/mongo"
 	"google.golang.org/grpc"
 )

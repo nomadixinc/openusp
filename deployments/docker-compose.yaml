@@ -13,7 +13,7 @@
 # limitations under the License.
 #      test: echo 'db.stats().ok' | mongo localhost:27017/test
 
-version: '3.7'
+#version: '3.7'
 services:
   openusp-db:
     image: mongo:latest
@@ -34,7 +34,7 @@ services:
       openusp:
         ipv4_address: 10.5.0.2
   openusp-broker:
-    image: islandora/activemq:mariadb_max_packet
+    image: islandora/activemq:6.4.3
     container_name: openusp-broker
     ports:
       - 61613:61613
@@ -57,7 +57,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/controller/Dockerfile
-    image: n4networks/openusp-controller:latest
+    image: nomadix/openusp-controller:latest
     container_name: openusp-controller
     depends_on:
       openusp-db:
@@ -73,7 +73,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/apiserver/Dockerfile
-    image: n4networks/openusp-apiserver:latest
+    image: nomadix/openusp-apiserver:latest
     container_name: openusp-apiserver
     depends_on:
        openusp-db:
@@ -91,7 +91,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/obuspa/Dockerfile
-    image: n4networks/openusp-agent:latest
+    image: nomadix/openusp-agent:latest
     container_name: openusp-agent
     depends_on:
        openusp-broker:
@@ -106,7 +106,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/cli/Dockerfile
-    image: n4networks/openusp-cli:latest
+    image: nomadix/openusp-cli:latest
     container_name: openusp-cli
     env_file:
       - ../configs/openusp.env
