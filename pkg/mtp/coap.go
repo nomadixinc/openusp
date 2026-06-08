@@ -132,7 +132,7 @@ func CoAPServerDTLS(cfg *CoAPCfg, exit chan int32) {
 			fmt.Printf("Client's hint: %s\n", hint)
 			return []byte{0xAB, 0xC1, 0x23}, nil
 		},
-		PSKIdentityHint: []byte("N4 DTLS client"),
+		PSKIdentityHint: []byte("NX DTLS client"),
 		CipherSuites:    []piondtls.CipherSuiteID{piondtls.TLS_PSK_WITH_AES_128_CCM_8},
 	}
 
@@ -324,7 +324,7 @@ func coAPDTLSClient() {
 				fmt.Printf("Server's hint: %s \n", hint)
 				return []byte{0xAB, 0xC1, 0x23}, nil
 			},
-			PSKIdentityHint: []byte("N4 CoAP DTLS Client"),
+			PSKIdentityHint: []byte("NX CoAP DTLS Client"),
 			CipherSuites:    []dtls.CipherSuiteID{dtls.TLS_PSK_WITH_AES_128_CCM_8},
 		})
 		if err != nil {

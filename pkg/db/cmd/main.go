@@ -29,7 +29,7 @@ var agentId string = "os::SSGspa-02:42:ac:11:00:06"
 var path string = "Device."
 
 func main() {
-	log.SetPrefix("N4: ")
+	log.SetPrefix("NX: ")
 	log.SetFlags(log.Lshortfile | log.Ldate | log.Ltime)
 	//redisTest()
 	if err := initDb(); err != nil {

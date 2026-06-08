@@ -20,7 +20,7 @@ import (
 )
 
 var users = map[string]string{
-	"n4admin": "n4defaultpass",
+	"nxadmin": "nxdefaultpass",
 }
 
 func isAuthorized(username, password string) bool {
