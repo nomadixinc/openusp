@@ -24,7 +24,7 @@ cli:
 
 .PHONY: images
 images:
-	docker buildx build -t nomadix/openusp-controller:latest -f build/controller/Dockerfile --push --platform=linux/amd64,linux/arm64 .
-	docker buildx build -t nomadix/openusp-apiserver:latest -f build/apiserver/Dockerfile --push --platform=linux/amd64,linux/arm64 .
-	docker buildx build -t nomadix/openusp-cli:latest -f build/cli/Dockerfile --push --platform=linux/amd64,linux/arm64 .
+	docker buildx build -t nomadixinc/openusp-controller:latest -f build/controller/Dockerfile --push --platform=linux/amd64,linux/arm64 .
+	docker buildx build -t nomadixinc/openusp-apiserver:latest -f build/apiserver/Dockerfile --push --platform=linux/amd64,linux/arm64 .
+	docker buildx build -t nomadixinc/openusp-cli:latest -f build/cli/Dockerfile --push --platform=linux/amd64,linux/arm64 .
 

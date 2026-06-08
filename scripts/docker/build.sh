@@ -15,13 +15,13 @@
 
 
 # Controller
-docker buildx build -t nomadix/openusp-controller:latest -f build/controller/Dockerfile --push --platform=linux/amd64,linux/arm64 .
+docker buildx build -t nomadixinc/openusp-controller:latest -f build/controller/Dockerfile --push --platform=linux/amd64,linux/arm64 .
 
 # ApiServer
-docker buildx build -t nomadix/openusp-apiserver:latest -f build/apiserver/Dockerfile --push --platform=linux/amd64,linux/arm64 .
+docker buildx build -t nomadixinc/openusp-apiserver:latest -f build/apiserver/Dockerfile --push --platform=linux/amd64,linux/arm64 .
 
 # Cli
-docker buildx build -t nomadix/openusp-cli:latest -f build/cli/Dockerfile --push --platform=linux/amd64,linux/arm64 .
+docker buildx build -t nomadixinc/openusp-cli:latest -f build/cli/Dockerfile --push --platform=linux/amd64,linux/arm64 .
 
 # OBUSPA
-docker buildx build -t nomadix/openusp-agent:latest -f build/obuspa/Dockerfile --push --platform=linux/amd64,linux/arm64 .
+docker buildx build -t nomadixinc/openusp-agent:latest -f build/obuspa/Dockerfile --push --platform=linux/amd64,linux/arm64 .

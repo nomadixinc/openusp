@@ -15,10 +15,10 @@
 
 
 # Controller
-docker build -t nomadix/openusp-controller:local -f build/controller/Dockerfile .
+docker build -t nomadixinc/openusp-controller:local -f build/controller/Dockerfile .
 
 # ApiServer
-docker build -t nomadix/openusp-apiserver:local -f build/apiserver/Dockerfile .
+docker build -t nomadixinc/openusp-apiserver:local -f build/apiserver/Dockerfile .
 
 # Cli
-docker build -t nomadix/openusp-cli:local -f build/cli/Dockerfile .
+docker build -t nomadixinc/openusp-cli:local -f build/cli/Dockerfile .

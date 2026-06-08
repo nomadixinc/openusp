@@ -57,7 +57,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/controller/Dockerfile
-    image: nomadix/openusp-controller:latest
+    image: nomadixinc/openusp-controller:latest
     container_name: openusp-controller
     depends_on:
       openusp-db:
@@ -73,7 +73,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/apiserver/Dockerfile
-    image: nomadix/openusp-apiserver:latest
+    image: nomadixinc/openusp-apiserver:latest
     container_name: openusp-apiserver
     depends_on:
        openusp-db:
@@ -91,7 +91,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/obuspa/Dockerfile
-    image: nomadix/openusp-agent:latest
+    image: nomadixinc/openusp-agent:latest
     container_name: openusp-agent
     depends_on:
        openusp-broker:
@@ -106,7 +106,7 @@ services:
     build:
       context: ..
       dockerfile: ./build/cli/Dockerfile
-    image: nomadix/openusp-cli:latest
+    image: nomadixinc/openusp-cli:latest
     container_name: openusp-cli
     env_file:
       - ../configs/openusp.env
