@@ -16,10 +16,18 @@
 # > docker build -f Dockerfile -t obuspa:latest --target runner .
 #
 #FROM --platform=$BUILDPLATFORM ubuntu AS build-env
-FROM ubuntu AS build-env
+FROM ubuntu:22.04 AS build-env
+
+# Pinned to match the obuspa git submodule in .gitmodules
+ARG OBUSPA_COMMIT=e8350c6892af182a59c7e923c3f8c6d421973469
+ARG LIBWEBSOCKETS_TAG=v4.3.3
+
+# CA certs for git clone behind TLS-inspecting proxies (e.g. Cloudflare Gateway)
+COPY build/certs/*.crt /usr/local/share/ca-certificates/
 
 # Install dependencies
 RUN apt update && apt -y install \
+        ca-certificates \
         build-essential \
         libssl-dev \
         libcurl4-openssl-dev\
@@ -33,11 +41,12 @@ RUN apt update && apt -y install \
         git \
         cmake \
         make \
+    && update-ca-certificates \
     && apt clean
 
 RUN mkdir -p /usr/local/src
 WORKDIR /usr/local/src/
-RUN git clone https://github.com/warmcat/libwebsockets.git libwebsockets
+RUN git clone --branch ${LIBWEBSOCKETS_TAG} --depth 1 https://github.com/warmcat/libwebsockets.git libwebsockets
 WORKDIR /usr/local/src/libwebsockets
 RUN cmake -B build -S .
 RUN cd build && make && make install
@@ -47,14 +56,15 @@ RUN ldconfig -v
 
 ENV MAKE_JOBS=8
 
-COPY ./obuspa /obuspa/
+RUN git clone https://github.com/BroadbandForum/obuspa.git /obuspa \
+    && cd /obuspa && git checkout ${OBUSPA_COMMIT}
 RUN cd /obuspa/ && \
     autoreconf -fi && \
     ./configure && \
     make -j${MAKE_JOBS} && \
     make install
 
-FROM debian:stable AS build-release-stage
+FROM debian:bookworm-slim AS build-release-stage
 RUN apt update && apt -y install \
     libssl-dev \
     libsqlite3-dev \

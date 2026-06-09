@@ -17,7 +17,7 @@ The most simplest way to use is using docker-compose to pull all the required im
 git clone git@github.com:nomadixinc/openusp.git
 cd openusp
 source scripts/bash/aliases
-dc up -d
+dc up -d --build
 
 ubuntu@openusp:~/openusp$ dc up -d
 [+] Running 7/7

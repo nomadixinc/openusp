@@ -1,6 +1,9 @@
 #!/bin/sh
 # Copyright 2023 N4-Networks.com
 #
+# Refresh TLS inspection CA certs when builds fail with x509 errors:
+#   ./scripts/docker/prepare-certs.sh
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -13,6 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+"$(dirname "$0")/prepare-certs.sh"
 
 # Controller
 docker build -t nomadixinc/openusp-controller:local -f build/controller/Dockerfile .

@@ -26,6 +26,13 @@ ENV GOARCH $TARGETARCH
 # Set destination for COPY
 WORKDIR /app
 
+# CA certs for go mod download behind TLS-inspecting proxies (e.g. Cloudflare Gateway)
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+COPY build/certs/*.crt /usr/local/share/ca-certificates/
+RUN update-ca-certificates
+
 # Download Go modules
 COPY go.mod go.sum ./
 RUN go mod download
